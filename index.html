@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="total-amount-container">
+            <h3>BUDGET CALCULATOR</h3>
+            <p class="hide error" id="budget-error">
+              Value cannot be empty or negative
+            </p>
+
+            <form>
+                <input class="form-control input-lg" type="number" id="Age" placeholder="Enter Age"/>
+                <input class="form-control input-lg" type="text" id="Gender" placeholder="Enter Gender"/>
+                <input class="form-control input-lg" type="text" id="Marital status" placeholder="Enter Marital status"/>
+                <input class="form-control input-lg" type="number" id="Number of Dependents" placeholder="Enter Number of Dependents"/>
+                    </form>
+            <input
+              type="number"
+              id="total-amount"
+              placeholder="Enter Monthly Income"
+            />
+            <button class="submit" id="total-amount-button">Calculate Budget</button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="user-amount-container">
+            <h3>CATEGORIES</h3>
+            <p class="hide error" id="product-title-error">
+              Values cannot be empty
+            </p>
+                   
+            <input
+              type="text"
+              class="product-title"
+              id="product-title"
+              placeholder="Enter Category Name"
+            />
+            <input
+              type="number"
+              id="user-amount"
+              placeholder="Enter Cost of Category"
+            />
+            <button class="submit" id="check-amount">Submit</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space">
+          <div>
+            <p>Total Budget</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>Total Expenses</p>
+            <span id="expenditure-value">0</span>
+          </div>
+          <div>
+            <p>Balance</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+
+        <h3>CATEGORY  LIST</h3>
+        
+        <div class="list-container" id="list"></div>
+        <div class="table">
+            <table class="ti">
+        <tr  >
+        <th >BUDGET CATEGORY</th>
+        <th>PERCENTAGE</th>
+        <th>NAIRA AMOUNT</th>
+        </tr>
+        <tr>
+        <td>Housing</td>
+        </tr>
+        <tr>
+        <td>Food</td>
+        </tr>
+        <tr>
+        <td> Insurance</td>
+        </tr>
+        <tr>
+        <td>Health</td>
+        </tr>
+        <tr>
+        <td>Utility</td>
+        </tr>
+        <tr>
+        <td>Transportation</td>
+        </tr>
+        <tr>
+        <td>Tuition</td>
+        </tr>  
+    </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
